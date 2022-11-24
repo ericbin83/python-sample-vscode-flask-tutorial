@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ericbinpythonsamplevscodeflasktutorial 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ericbinpythonsamplevscodeflasktutorial
+  template:
+    metadata:
+      labels:
+        app: ericbinpythonsamplevscodeflasktutorial 
+    spec:
+      containers:
+        - name: ericbinpythonsamplevscodeflasktutorial 
+          image: ericjia.azurecr.io/ericbinpythonsamplevscodeflasktutorial
+          ports:
+          - containerPort: 5000
